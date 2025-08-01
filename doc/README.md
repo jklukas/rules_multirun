@@ -53,7 +53,7 @@ command(
 | Name  | Description | Type | Mandatory | Default |
 | :------------- | :------------- | :------------- | :------------- | :------------- |
 | <a id="command-name"></a>name |  A unique name for this target.   | <a href="https://bazel.build/concepts/labels#target-names">Name</a> | required |  |
-| <a id="command-data"></a>data |  The list of files needed by this command at runtime. See general comments about `data` in Bazel's [typical attributes](https://bazel.build/reference/be/common-definitions#typical-attributes) docs   | <a href="https://bazel.build/concepts/labels">List of labels</a> | optional |  `[]`  |
+| <a id="command-data"></a>data |  The list of files needed by this command at runtime. See general comments about `data` in Bazel's [typical attributes](https://bazel.build/reference/be/common-definitions#typical-attributes) docs.   | <a href="https://bazel.build/concepts/labels">List of labels</a> | optional |  `[]`  |
 | <a id="command-arguments"></a>arguments |  List of command line arguments. Subject to [`$(location)` expansion](https://docs.bazel.build/versions/master/skylark/lib/ctx.html#expand_location). Note that `args` defined on the target of the command aren't available to starlark code so may need to be duplicated here; see [#77](https://github.com/keith/rules_multirun/issues/77).   | List of strings | optional |  `[]`  |
 | <a id="command-command"></a>command |  Target to run   | <a href="https://bazel.build/concepts/labels">Label</a> | required |  |
 | <a id="command-description"></a>description |  A string describing the command printed during multiruns   | String | optional |  `""`  |
@@ -83,7 +83,7 @@ load("@rules_multirun//:defs.bzl", "multirun", command = "command_force_opt")
 | Name  | Description | Type | Mandatory | Default |
 | :------------- | :------------- | :------------- | :------------- | :------------- |
 | <a id="command_force_opt-name"></a>name |  A unique name for this target.   | <a href="https://bazel.build/concepts/labels#target-names">Name</a> | required |  |
-| <a id="command_force_opt-data"></a>data |  The list of files needed by this command at runtime. See general comments about `data` in Bazel's [typical attributes](https://bazel.build/reference/be/common-definitions#typical-attributes) docs   | <a href="https://bazel.build/concepts/labels">List of labels</a> | optional |  `[]`  |
+| <a id="command_force_opt-data"></a>data |  The list of files needed by this command at runtime. See general comments about `data` in Bazel's [typical attributes](https://bazel.build/reference/be/common-definitions#typical-attributes) docs.   | <a href="https://bazel.build/concepts/labels">List of labels</a> | optional |  `[]`  |
 | <a id="command_force_opt-arguments"></a>arguments |  List of command line arguments. Subject to [`$(location)` expansion](https://docs.bazel.build/versions/master/skylark/lib/ctx.html#expand_location). Note that `args` defined on the target of the command aren't available to starlark code so may need to be duplicated here; see [#77](https://github.com/keith/rules_multirun/issues/77).   | List of strings | optional |  `[]`  |
 | <a id="command_force_opt-command"></a>command |  Target to run   | <a href="https://bazel.build/concepts/labels">Label</a> | required |  |
 | <a id="command_force_opt-description"></a>description |  A string describing the command printed during multiruns   | String | optional |  `""`  |
